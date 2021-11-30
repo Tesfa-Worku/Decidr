@@ -8,8 +8,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Decidr App</p>
       </header>
+      <body className="Input">
+        <div>
+          <input type="text" name="Add Item" placeholder="Add Item"/>
+          <button 
+          // onChange={}
+          >
+            Add Item</button>
+        </div>          
+      </body>
     </div>
   );
 }
