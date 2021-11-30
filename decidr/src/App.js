@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Decidr</h1>
       </header>
       <body className="Input">
         <div>
