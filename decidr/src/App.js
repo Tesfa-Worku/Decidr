@@ -7,10 +7,15 @@ function App() {
 
   return(
     <div>
-      <AddItem
-        listContainer={listContainer}
-        setListContainer={setListContainer}
-      />
+      <div>
+        <header>
+          <h1>Decidr</h1>
+        </header>
+
+        <AddItem
+          listContainer={listContainer}
+          setListContainer={setListContainer}
+        />
         <div>
           {
             listContainer.map((item, i) => <p key={i}>{item}</p>)
