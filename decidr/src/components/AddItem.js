@@ -1,12 +1,22 @@
 import { useState} from 'react';
 
-function AddItem() {
-
+function AddItem(
+    {listContainer, setListContainer}) 
+    {
+    const [newItem, setNewItem] = useState('');
+    
+    const formSubmit = (event) =>{
+        setListContainer([...listContainer, newItem])        
+        setNewItem('');
+        event.preventDefault();
+    }
     return(
         <div>
-            <form>
+            <form onSubmit={formSubmit}>
                 <input
-                    id="add-item"                
+                    id="add-item"
+                    value={newItem}
+                    onChange={event => setNewItem(event.target.value)}                
                     placeholder="Add An Item"
                 />
                 <button
