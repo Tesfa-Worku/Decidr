@@ -7,7 +7,10 @@ function App() {
 
   return(
     <div>
-      <AddItem />
+      <AddItem
+        listContainer={listContainer}
+        setListContainer={setListContainer}
+      />
     </div>
   )
 }
