@@ -24,7 +24,7 @@ function App() {
 
         <div>
           {
-            listContainer.map((item, i) => <p key={i}>{item}</p>)
+            listContainer.map((item, index) => <p key={index}>{item}</p>)
           }
         </div>
 
