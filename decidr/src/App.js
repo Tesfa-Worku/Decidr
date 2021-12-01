@@ -21,6 +21,9 @@ function App() {
             listContainer.map((item, i) => <p key={i}>{item}</p>)
           }
         </div>
+        <button>
+          Select An Item
+        </button>
       </div>      
     </div>
   )
