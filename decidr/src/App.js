@@ -11,6 +11,12 @@ function App() {
         listContainer={listContainer}
         setListContainer={setListContainer}
       />
+        <div>
+          {
+            listContainer.map((item, i) => <p key={i}>{item}</p>)
+          }
+        </div>
+      </div>      
     </div>
   )
 }
