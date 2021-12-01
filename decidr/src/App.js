@@ -10,6 +10,9 @@ function App() {
     setSelectItem(()=>(listContainer[Math.floor(Math.random() * listContainer.length)]))		
   };
 
+  const displayList = listContainer.map((item, index) => <p key={index}>{item}</p>)
+  
+
   return(
     <div>
       <div>
@@ -23,9 +26,7 @@ function App() {
         />
 
         <div>
-          {
-            listContainer.map((item, index) => <p key={index}>{item}</p>)
-          }
+          {displayList}
         </div>
 
         <div>
