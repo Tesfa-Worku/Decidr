@@ -32,6 +32,7 @@ function App() {
           <button onClick={selectRandomItem}>
             Select An Item
           </button>
+          <p>{selectItem}</p>
         </div>
         
       </div>      
