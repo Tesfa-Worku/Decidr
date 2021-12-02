@@ -12,9 +12,8 @@ function AddItem(
     }
     return(
         <div>
-            <form onSubmit={formSubmit}>
-                <input
-                    id="add-item"
+            <form id="add-item">
+                <input                    
                     value={newItem}
                     onChange={event => setNewItem(event.target.value)}                
                     placeholder="Add An Item"
@@ -22,6 +21,7 @@ function AddItem(
                 <button
                     id="submit-item"
                     type="submit"
+                    onClick={formSubmit}
                 >
                     Add Item
                 </button>
