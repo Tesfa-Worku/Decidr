@@ -7,36 +7,35 @@ function App() {
   const [selectItem, setSelectItem] = useState('');
 
   const selectRandomItem = () => {
-    setSelectItem(()=>(listContainer[Math.floor(Math.random() * listContainer.length)]))		
+    setSelectItem(()=>(listContainer[Math.floor(Math.random() * listContainer.length)]));    
   };
 
-  const displayList = listContainer.map((item, index) => <p key={index}>{item}</p>)
-  
+  const displayList = listContainer.map((item, index) => <li key={index}>{item}</li>) 
 
   return(
-    <div>
-      <div>
+    <div className="App">    
         <header>
-          <h1>Decidr</h1>
+          Decidr
         </header>
 
-        <AddItem
-          listContainer={listContainer}
-          setListContainer={setListContainer}
-        />
+        <main>
+          <AddItem
+            listContainer={listContainer}
+            setListContainer={setListContainer}
+          />        
 
-        <div>
-          {displayList}
-        </div>
+          <ol id="display-list">
+            {displayList}
+          </ol>
 
-        <div>
+          <p id="selected">{selectItem}</p>
+        </main>
+
+        <footer>
           <button onClick={selectRandomItem}>
             Select An Item
-          </button>
-          <p>{selectItem}</p>
-        </div>
-        
-      </div>      
+          </button>          
+        </footer>     
     </div>
   )
 }
