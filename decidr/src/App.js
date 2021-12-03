@@ -14,28 +14,28 @@ function App() {
 
   return(
     <div className="App">    
-        <header>
-          Decidr
-        </header>
+          <header>
+            Decidr
+          </header>
 
-        <main>
+          <main>        
+            <ol id="display-list">
+              {displayList}
+            </ol>
+
+            <p id="selected">{selectItem}</p>
+          </main>
+
           <AddItem
             listContainer={listContainer}
             setListContainer={setListContainer}
-          />        
+          /> 
 
-          <ol id="display-list">
-            {displayList}
-          </ol>
-
-          <p id="selected">{selectItem}</p>
-        </main>
-
-        <footer>
-          <button onClick={selectRandomItem}>
-            Select An Item
-          </button>          
-        </footer>     
+          <footer>
+            <button onClick={selectRandomItem}>
+              Select An Item
+            </button>          
+          </footer>                     
     </div>
   )
 }
