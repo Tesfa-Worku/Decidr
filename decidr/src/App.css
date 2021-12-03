@@ -40,13 +40,18 @@ main {
   align-items: center;
 }
 
-#display-list li {
-  text-align: left;
-  width: auto;
+#display-list li{
+  background-color:yellowgreen;
+  width: 80%;
+  border-radius: 5px;  
+  color: rgb(102, 101, 97);  
+  margin-bottom: 5px;
+  text-align: center;  
 }
 
 #selected {  
-  font-size: 2em;
+  font-size: 2em;  
+  color: red;  
 }
 
 footer {  
@@ -60,7 +65,7 @@ button {
   border-radius: 3px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
 
   .App {
     height: 100vh;
