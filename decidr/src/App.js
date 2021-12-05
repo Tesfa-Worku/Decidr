@@ -6,11 +6,22 @@ function App() {
   const [listContainer, setListContainer] = useState([]);
   const [selectItem, setSelectItem] = useState('');
 
+  const displayList = listContainer.map
+    ((item, index) =>    
+      <li key={index}>{item} 
+        <button onClick={() => {deleteItem(index)}}>del</button>
+      </li>    
+    )
+
+  const deleteItem = (index) => {
+    let listOfItem = [...listContainer];
+      listOfItem.splice(index, 1);
+      setListContainer(listOfItem);
+  }
+
   const selectRandomItem = () => {
     setSelectItem(()=>(listContainer[Math.floor(Math.random() * listContainer.length)]));    
   };
-
-  const displayList = listContainer.map((item, index) => <li key={index}>{item}</li>) 
 
   return(
     <div className="App">    
@@ -18,11 +29,10 @@ function App() {
             Decidr
           </header>
 
-          <main>        
+          <main>            
             <ol id="display-list">
-              {displayList}
+              {displayList}              
             </ol>
-
             <p id="selected">{selectItem}</p>
           </main>
 
