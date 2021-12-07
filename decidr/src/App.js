@@ -44,6 +44,9 @@ function App() {
           <footer>
             <button onClick={selectRandomItem}>
               Select An Item
+            </button>
+            <button>
+              Clear List
             </button>          
           </footer>                     
     </div>
